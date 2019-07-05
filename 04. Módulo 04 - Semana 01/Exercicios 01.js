@@ -75,12 +75,21 @@ console.log('Somente Pares', somenteImpares)
     crie o corpo da função de forma que ela realize as 4 operações aritméticas
 */
 const calculadora = (valorA, tipo, valorB) => {
+    /*
     let result
     if (tipo === '+') result = valorA + valorB
     if (tipo === '-') result = valorA - valorB
     if (tipo === '*') result = valorA * valorB
     if (tipo === '/') result = valorA / valorB
     return result
+    */
+    const ops = {
+        '+': (valorA, valorB) => valorA + valorB,
+        '-': (valorA, valorB) => valorA - valorB,
+        '*': (valorA, valorB) => valorA * valorB,
+        '/': (valorA, valorB) => valorA / valorB
+    }
+    return ops[tipo](valorA, valorB)
 }
 console.log(calculadora(10, '+', 20))
 
