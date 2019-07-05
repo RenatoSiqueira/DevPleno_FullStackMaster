@@ -1,0 +1,22 @@
+body { 
+    font-family: 'Roboto', sans-serif;
+}
+ul {
+    list-style: none;
+    padding-left: 20px;
+}
+h2 {
+    background-color: #C4C4C4;
+    padding: 8px;
+    font-size: 24px;
+}
+h3 {
+    font-size: 24px;
+}
+h1{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
