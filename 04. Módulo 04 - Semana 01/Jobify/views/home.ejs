@@ -1,11 +1,11 @@
 <% include header.ejs %>
-<h2>Open Roles</h2>
+<h2>Open Roles - <a href="/admin">Admin Area</a></h2>
 <% categorias.forEach( categoria => { %>
 <div>
     <h3><%= categoria.categoria %></h3>
     <ul>
         <% categoria.vagas.forEach( vaga => { %>
-            <li><a href="/vaga/<%= vaga.id %>"><%= vaga.titulo %></a></li>
+        <li><a href="/vaga/<%= vaga.id %>"><%= vaga.titulo %></a></li>
         <% }) %>
     </ul>
 </div>
