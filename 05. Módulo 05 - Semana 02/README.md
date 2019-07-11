@@ -14,7 +14,7 @@
 - Aula 09: Funções e Arrow Functions
 - Aula 10: Pure Functions
 - Aula 11: High-order Functions
-- Projeto prático: ConvertMyMoney
+- Projeto prático: ConvertMyMoney - [Ver Online](https://devplenoconvertmymoney.renatoelysiqueira.now.sh/)
 - Aula 12: iniciando o projeto
 - Aula 13: adicionando funcionalidade e estilos
 - Aula 14: adicionando testes automatizados em uma pequena parte do projeto
