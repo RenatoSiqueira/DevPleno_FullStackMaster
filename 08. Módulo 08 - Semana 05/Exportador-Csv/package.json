@@ -1,0 +1,9 @@
+{
+  "name": "Exportador-Csv",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "mysql": "^2.17.1"
+  }
+}
