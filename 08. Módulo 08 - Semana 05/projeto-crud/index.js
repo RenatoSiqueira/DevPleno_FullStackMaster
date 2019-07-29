@@ -1,21 +1,23 @@
+require('dotenv').config()
 const express = require('express')
 const mysql = require('mysql')
 const path = require('path')
 const app = express()
+
 const port = process.env.Port || 3000
 const connection = mysql.createConnection({
-    host: '127.0.0.1',
-    user: 'root',
-    password: '',
-    database: 'cadastro'
+    host: process.env.hostDB,
+    user: process.env.userDB,
+    port: process.env.portDB,
+    password: process.env.passDB,
+    database: process.env.databaseDB
 })
 
-connection.connect((err) => {
-    if (err)
-        console.log('Error on Connect')
-    else
-        console.log('Connected')
-})
+const dependencies = {
+    connection
+}
+
+const pessoas = require('./routes/pessoas')
 
 app.use(express.static('public'))
 
@@ -25,5 +27,12 @@ app.set('view engine', 'ejs')
 app.get('/', (req, res) => {
     res.render('home')
 })
+app.use('/pessoas/', pessoas(dependencies))
 
-app.listen(port, () => console.log('Server Started on: ' + port))
+connection.connect((err) => {
+    if (err)
+        console.log('Error on Connect', err)
+    else {
+        app.listen(port, () => console.log('Server Started on: ' + port))
+    }
+})
