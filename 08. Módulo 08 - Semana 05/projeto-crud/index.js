@@ -2,6 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const mysql = require('mysql')
 const path = require('path')
+const bodyParser = require('body-parser')
 const app = express()
 
 const port = process.env.Port || 3000
@@ -19,6 +20,7 @@ const dependencies = {
 
 const pessoas = require('./routes/pessoas')
 
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static('public'))
 
 app.set('views', path.join(__dirname, 'views'))
