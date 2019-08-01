@@ -17,7 +17,7 @@ const createForm = (req, res) => {
 
 const createProcess = async (connection, req, res) => {
     await pessoas.create(connection, req.body)
-    req.redirect('/pessoas')
+    res.redirect('/pessoas')
 }
 
 const updateForm = async (connection, req, res) => {
@@ -27,7 +27,7 @@ const updateForm = async (connection, req, res) => {
 
 const updateProcess = async (connection, req, res) => {
     await pessoas.update(connection, req.params.id, req.body)
-    req.redirect('/pessoas')
+    res.redirect('/pessoas')
 }
 
 module.exports = {

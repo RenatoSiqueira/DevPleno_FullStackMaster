@@ -1,11 +1,23 @@
 require('dotenv').config()
 const express = require('express')
-const mysql = require('mysql')
+//const mysql = require('mysql')
 const path = require('path')
 const bodyParser = require('body-parser')
 const app = express()
 
 const port = process.env.Port || 3000
+
+const connection = require('knex')({
+    client: 'mysql2',
+    connection: {
+        host: process.env.hostDB,
+        user: process.env.userDB,
+        port: process.env.portDB,
+        password: process.env.passDB,
+        database: process.env.databaseDB
+    }
+})
+/*
 const connection = mysql.createConnection({
     host: process.env.hostDB,
     user: process.env.userDB,
@@ -13,6 +25,7 @@ const connection = mysql.createConnection({
     password: process.env.passDB,
     database: process.env.databaseDB
 })
+*/
 
 const dependencies = {
     connection
@@ -31,10 +44,4 @@ app.get('/', (req, res) => {
 })
 app.use('/pessoas/', pessoas(dependencies))
 
-connection.connect((err) => {
-    if (err)
-        console.log('Error on Connect', err)
-    else {
-        app.listen(port, () => console.log('Server Started on: ' + port))
-    }
-})
+app.listen(port, () => console.log('Server Started on: ' + port))
