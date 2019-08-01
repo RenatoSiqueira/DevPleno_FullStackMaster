@@ -1,6 +1,6 @@
 # FullStack Master
 
-### Módulo 07 - Semana 04
+### Módulo 08 - Semana 05
 - Aula 01: SQL ou NoSQL?
 - Aula 02: SQL - Ferramentas
 - Aula 03: SQL - Modelando o banco de dados com MySQL Workbench
