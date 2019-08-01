@@ -1,0 +1,14 @@
+{
+  "name": "orm-intro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "mysql2": "^1.6.5",
+    "sequelize": "^5.12.2"
+  }
+}
