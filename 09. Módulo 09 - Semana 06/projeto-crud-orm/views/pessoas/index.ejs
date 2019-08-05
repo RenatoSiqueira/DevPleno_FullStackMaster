@@ -1,0 +1,25 @@
+<% include ../partials/header.ejs %>
+
+<h1>Pessoa</h1>
+<p>
+    <a href="/pessoas/create">Nova Pessoa</a>
+</p>
+<table class="table table-striped table-hover table-border">
+    <tr>
+        <th>Nome</th>
+        <th>Cargo</th>
+        <th>Ações</th>
+    </tr>
+    <% pessoas.map( pessoa => { %>
+    <tr><%= pessoa.nome %></tr>
+    <tr><%= pessoa.cargo %></tr>
+    <tr>
+        <div class="btn-group" role="group">
+            <a href="/pessoas/edit/<%= pessoa.id %>" class="btn btn-default">Editar</a>
+            <a href="/pessoas/delete/<%= pessoa.id %>" class="btn btn-default">Excluir</a>
+        </div>
+    </tr>
+    <% }) %>
+</table>
+
+<% include ../partials/footer.ejs %>
