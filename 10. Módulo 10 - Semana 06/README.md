@@ -1,5 +1,7 @@
 # FullStack Master
 
+[Repositório DevShop](https://github.com/RenatoSiqueira/DevPleno_DevShop)
+
 ### Módulo 10 - Semana 06
 - Aula 01: introdução ao DevShop
 - Aula 02: Criando o schema do banco de dados
@@ -11,4 +13,3 @@
 - Aula 08: Slug
 - Aula 09: Padrões de projeto
 - Desafio da semana
-- Logo DevShop
