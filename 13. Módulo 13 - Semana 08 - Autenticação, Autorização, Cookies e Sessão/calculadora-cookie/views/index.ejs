@@ -1,0 +1,21 @@
+<form action="/calc" method="POST">
+    <input type="text" name="num1">
+    <select name="op" id="op">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="text" name="num2">
+    <button type="submit">Calcular</button>
+</form>
+
+
+<% if(contas.length > 0) { %>
+<h2>Contas</h2>
+<ul>
+    <% contas.forEach( conta => { %>
+    <li><%= conta.num1 %> <%= conta.op %> <%= conta.num2 %> = <%= conta.total %></li>
+    <% }) %>
+</ul>
+<% } %>
