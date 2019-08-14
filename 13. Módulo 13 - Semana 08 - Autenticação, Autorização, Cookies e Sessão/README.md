@@ -1,5 +1,7 @@
 # FullStack Master
 
+[Repositório DevShop](https://github.com/RenatoSiqueira/DevPleno_DevShop)
+
 ### Módulo 13 - Semana 08
 - Aula 01: autenticação ou autorização?
 - Aula 02: Cookie e sessão
