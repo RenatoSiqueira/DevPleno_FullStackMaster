@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
 
-const userShema = new mongoose.Schema({
+const UserSchema = new mongoose.Schema({
     username: {
         type: String,
         required: true
@@ -9,10 +9,14 @@ const userShema = new mongoose.Schema({
     password: {
         type: String,
         required: true
+    },
+    role: {
+        type: [String],
+        enum: ['restrito', 'admin']
     }
 })
 
-userShema.pre('save', function (next) {
+UserSchema.pre('save', function (next) {
     const user = this
 
     if (!user.isModified('password')) {
@@ -27,5 +31,18 @@ userShema.pre('save', function (next) {
     })
 })
 
-const User = mongoose.model('User', userShema)
+UserSchema.methods.checkPassword = function (password) {
+    return new Promise((resolve, reject) => {
+        bcrypt.compare(password, this.password, (err, isMatch) => {
+            if (err) {
+                reject(err)
+            } else {
+                resolve(isMatch)
+            }
+        })
+    })
+
+}
+
+const User = mongoose.model('User', UserSchema)
 module.exports = User
