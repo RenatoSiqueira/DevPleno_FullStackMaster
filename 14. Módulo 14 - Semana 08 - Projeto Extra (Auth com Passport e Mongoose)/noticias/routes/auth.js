@@ -5,6 +5,7 @@ const User = require('../models/user')
 
 const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy
+const FacebookStrategy = require('passport-facebook').Strategy
 
 
 router.use(passport.initialize())
@@ -30,6 +31,26 @@ passport.use(new LocalStrategy(async (username, password, done) => {
         }
     } else {
         return done(null, false)
+    }
+}))
+
+passport.use(new FacebookStrategy({
+    clientID: '497233807746337',
+    clientSecret: '977d03df145b906bb4b1c008bf1489d8',
+    callbackURL: 'http://localhost:3000/facebook/callback',
+    profileFields: ['id', 'displayName', 'email', 'photos']
+}, async (accessToken, refreshToken, profile, done) => {
+    const userDB = await User.findOne({ facebookId: profile.id })
+    if (!userDB) {
+        const user = new User({
+            name: profile.displayName,
+            facebookId: profile.id,
+            role: ['restrito']
+        })
+        await user.save()
+        done(null, user)
+    } else {
+        done(null, userDB)
     }
 }))
 
@@ -62,6 +83,14 @@ router.post('/login', passport.authenticate('local', {
     failureRedirect: '/login',
     failureFlash: false
 }))
+
+router.get('/facebook', passport.authenticate('facebook'))
+router.get('/facebook/callback',
+    passport.authenticate('facebook', { failureRedirect: '/' }),
+    (req, res) => {
+        res.redirect('/')
+    }
+)
 
 router.get('/logout', (req, res) => {
     req.session.destroy(() => {

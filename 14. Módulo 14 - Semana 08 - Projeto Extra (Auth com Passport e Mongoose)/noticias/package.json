@@ -12,6 +12,9 @@
     "ejs": "^2.6.2",
     "express": "^4.17.1",
     "express-session": "^1.16.2",
-    "mongoose": "^5.6.9"
+    "mongoose": "^5.6.9",
+    "passport": "^0.4.0",
+    "passport-facebook": "^3.0.0",
+    "passport-local": "^1.0.0"
   }
 }
