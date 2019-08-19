@@ -4,8 +4,8 @@ const router = express.Router()
 const Noticia = require('../models/noticia')
 
 router.use((req, res, next) => {
-    if ('user' in req.session) {
-        if (req.session.user.role.indexOf('admin') >= 0) {
+    if (req.isAuthenticated()) {
+        if (req.user.role.indexOf('admin') >= 0) {
             return next()
         } else {
             res.redirect('/')
