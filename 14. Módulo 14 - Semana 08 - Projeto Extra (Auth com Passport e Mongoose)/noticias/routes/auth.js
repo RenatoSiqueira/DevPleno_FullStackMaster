@@ -6,7 +6,7 @@ const User = require('../models/user')
 const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy
 const FacebookStrategy = require('passport-facebook').Strategy
-
+const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy
 
 router.use(passport.initialize())
 router.use(passport.session())
@@ -54,6 +54,25 @@ passport.use(new FacebookStrategy({
     }
 }))
 
+passport.use(new GoogleStrategy({
+    clientID: process.env.clientIDGoogle,
+    clientSecret: process.env.ClientIDGooglePassword,
+    callbackURL: 'http://localhost:3000/google/callback'
+}, async (accessToken, refreshToken, err, profile, done) => {
+    const userDB = await User.findOne({ googleId: profile.id })
+    if (!userDB) {
+        const user = new User({
+            name: profile.displayName,
+            googleId: profile.id,
+            role: ['restrito']
+        })
+        await user.save()
+        done(null, user)
+    } else {
+        done(null, userDB)
+    }
+}))
+
 router.use((req, res, next) => {
     if (req.isAuthenticated()) {
         res.locals.user = req.user
@@ -91,6 +110,9 @@ router.get('/facebook/callback',
         res.redirect('/')
     }
 )
+
+router.get('/google', passport.authenticate('google', { scope: ['https://developers.google.com/+/web/api/rest/oauth#profile'] }))
+router.get('/google/callback', passport.authenticate('google', { failureRedirect: '/', successRedirect: '/' }))
 
 router.get('/logout', (req, res) => {
     req.session.destroy(() => {
