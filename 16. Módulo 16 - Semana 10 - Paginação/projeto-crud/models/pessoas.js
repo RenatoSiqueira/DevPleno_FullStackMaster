@@ -1,6 +1,8 @@
-const findAll = (connection) => {
+const findAll = (connection, params) => {
     return new Promise((resolve, reject) => {
-        connection.query('select * from pessoas', (err, results) => {
+        const offset = 0
+        const pageSize = 10
+        connection.query(`select * from pessoas limit ${offset},${pageSize}`, (err, results) => {
             if (err)
                 reject(err)
             else
