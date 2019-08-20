@@ -1,3 +1,4 @@
+require('dotenv').config()
 const path = require('path')
 const express = require('express')
 const app = express()
@@ -7,7 +8,7 @@ const bodyParser = require('body-parser')
 
 mongoose.Promise = global.Promise
 
-const port = process.env.port || 3000
+const { port, mongo } = process.env
 
 const User = require('./models/user')
 const Noticia = require('./models/noticia')
@@ -16,8 +17,6 @@ const Restrito = require('./routes/restrito')
 const Auth = require('./routes/auth')
 const Pages = require('./routes/pages')
 const Admin = require('./routes/admin')
-
-const mongo = process.env.MONGODB || 'mongodb://localhost/noticias'
 
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
@@ -34,7 +33,7 @@ app.use('/restrito', Restrito)
 app.use('/admin', Admin)
 
 const createInitialUser = async () => {
-    const total = await User.count({ username: 'renato' })
+    const total = await User.count({})
     if (total === 0) {
         const user = new User({
             username: 'user1',

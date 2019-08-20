@@ -35,8 +35,8 @@ passport.use(new LocalStrategy(async (username, password, done) => {
 }))
 
 passport.use(new FacebookStrategy({
-    clientID: '497233807746337',
-    clientSecret: '977d03df145b906bb4b1c008bf1489d8',
+    clientID: process.env.clientIDFacebook,
+    clientSecret: process.env.ClientIDPassword,
     callbackURL: 'http://localhost:3000/facebook/callback',
     profileFields: ['id', 'displayName', 'email', 'photos']
 }, async (accessToken, refreshToken, profile, done) => {
