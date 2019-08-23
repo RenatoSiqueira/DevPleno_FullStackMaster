@@ -1,0 +1,17 @@
+{
+  "name": "facebook-integration",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.1.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "fb": "^2.0.0",
+    "mongoose": "^5.6.10",
+    "passport": "^0.4.0",
+    "passport-facebook": "^3.0.0"
+  }
+}
