@@ -1,8 +1,9 @@
 const mongoose = require('mongoose')
+
 const CommentSchema = mongoose.Schema({
     comment: String
 })
-const serieSchema = mongoose.Schema({
+const SerieSchema = mongoose.Schema({
     name: {
         type: String,
         required: true
@@ -14,6 +15,6 @@ const serieSchema = mongoose.Schema({
     comments: [CommentSchema]
 })
 
-const Serie = mongoose.define('Serie', serieSchema)
+const Serie = mongoose.model('Serie', SerieSchema)
 
 module.exports = Serie
