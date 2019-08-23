@@ -10,4 +10,8 @@ router.get('/', (req, res) => {
     res.send(series)
 })
 
+router.get('/:id', (req, res) => {
+    res.send(req.params.id)
+})
+
 module.exports = router
