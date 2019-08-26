@@ -1,0 +1,8 @@
+<ul>
+    <% empresas.forEach( (empresa, indice) => { %>
+    <li>
+        <%= empresa.nome %>
+        <img src="/image/<%= indice %>" />
+    </li>
+    <% })%>
+</ul>
