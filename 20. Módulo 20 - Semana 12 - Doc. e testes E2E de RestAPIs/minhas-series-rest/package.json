@@ -2,6 +2,10 @@
   "name": "minhas-series-rest",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha --reporter spec  \"./{,!(node_modules)/**/}/*.test.js\""
+  },
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -9,5 +13,10 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.6.10"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0",
+    "supertest": "^4.0.2"
   }
 }
