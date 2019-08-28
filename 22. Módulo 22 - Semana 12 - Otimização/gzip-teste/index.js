@@ -15,6 +15,7 @@ for (let i = 0; i < 70000; i++) {
 
 app.use(compression({ level: 9 }))
 app.get('/', (req, res) => {
+    res.header('Cache-Control', 'public, max-age=3600')
     res.send(largeObject)
 })
 
