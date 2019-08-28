@@ -1,0 +1,11 @@
+{
+  "name": "caching-things",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.3.1",
+    "redis": "^2.8.0"
+  }
+}
