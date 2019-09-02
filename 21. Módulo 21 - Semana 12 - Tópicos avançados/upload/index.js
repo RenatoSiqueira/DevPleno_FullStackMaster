@@ -11,12 +11,12 @@ const storage = multer.diskStorage({
         cb(null, Date.now() + '-' + file.originalname)
     }
 })
-const upload = multer({ storage })
+const uploadT = multer({ storage })
 
-app.use('view engine', 'ejs')
+app.set('view engine', 'ejs')
 
-app.get('/', (req, res) => res.render('index'))
-app.post('/', upload.single('img'), (req, res) => {
+app.get('/', (req, res) => res.render('home'))
+app.post('/', uploadT.single('img'), (req, res) => {
     console.log(req.body, req.file)
     res.send('ok')
 })
