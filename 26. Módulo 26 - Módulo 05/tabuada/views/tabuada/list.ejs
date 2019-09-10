@@ -2,9 +2,9 @@
 <div class="starter-template">
     <h1>Escolha o seu Número</h1>
     <ul class="list-group list-group-flush">
-        <% for(let i = 1; i<= 100; i++) { %>
+        <% numeros.map(i => { %>
         <li class="list-group-item"><a href="/tabuadas/do/<%= i %>">Tabuada do <%= i %></a></li>
-        <% } %>
+        <% }) %>
     </ul>
 </div>
 <% include ../partials/footer %>
