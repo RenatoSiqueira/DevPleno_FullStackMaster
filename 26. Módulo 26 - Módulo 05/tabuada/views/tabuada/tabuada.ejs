@@ -1,0 +1,16 @@
+<% include ../partials/header %>
+<div class="starter-template">
+    <h1>Tabuada do Número <%= num %></h1>
+    <table class="table table-striped table-bordered table-hover">
+        <% for(let i = 0; i <= 100; i++) { %>
+        <tr>
+            <td><%= num %></td>
+            <td>x</td>
+            <td><%= i %></td>
+            <td>=</td>
+            <td><%= (num*i) %></td>
+        </tr>
+        <% } %>
+    </table>
+</div>
+<% include ../partials/footer %>
