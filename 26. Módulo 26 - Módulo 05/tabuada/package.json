@@ -3,11 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "./node_modules/.bin/mocha \"./{,!(node_modules)/**/}*.test.js\""
   },
   "license": "MIT",
   "dependencies": {
     "ejs": "^2.7.1",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@sinonjs/referee-sinon": "^5.0.0",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0"
   }
 }
