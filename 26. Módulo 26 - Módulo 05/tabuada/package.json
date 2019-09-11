@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "./node_modules/.bin/mocha \"./{,!(node_modules)/**/}*.test.js\""
+    "coverage": "./node_modules/.bin/nyc mocha \"./{,!(node_modules)/**/}*.test.js\" --reporter spec",
+    "test": "./node_modules/.bin/mocha \"./{,!(node_modules)/**/}*.test.js\" --reporter spec"
   },
   "license": "MIT",
   "dependencies": {
@@ -14,6 +15,7 @@
   "devDependencies": {
     "@sinonjs/referee-sinon": "^5.0.0",
     "chai": "^4.2.0",
-    "mocha": "^6.2.0"
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1"
   }
 }
