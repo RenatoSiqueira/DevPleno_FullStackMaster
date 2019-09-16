@@ -1,0 +1,22 @@
+{
+  "name": "projeto-teste",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec **/*.test.js",
+    "start": "node index.js",
+    "coverage": "nyc mocha --reporter spec **/*.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "nyc": "^11.2.1",
+    "sinon": "^4.0.1"
+  }
+}
