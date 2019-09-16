@@ -3,8 +3,8 @@
 ### Repositório: [DevPleno_CI-CD](https://github.com/RenatoSiqueira/DevPleno_CI-CD)
 
 ### Módulo 31 - Bônus: CI/CD - Continuous Integration / Continuous Deployment
-[OK] - Introdução a CI/CD
-[OK] - Codeship: criando o projeto e o primeiro push/build
+- Introdução a CI/CD
+- Codeship: criando o projeto e o primeiro push/build
 - Codeship: branch status e bloqueando branches contra escrita direta
 - Codeship: Continous Deployment com servidor de Dev/Prod
 - Jenkins: instalando
