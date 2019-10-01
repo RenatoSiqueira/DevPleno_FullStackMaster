@@ -83,4 +83,23 @@ Módulo 36 - Bônus: Fullstack Academy - "Meu Dinheiro"
 ``` 
 > Informações Gerais
 > Boas vindas
+> Correção dos exercícios
+> Dúvidas async-await
+> Dúvidas gerais
+```
+
+#### 3. Meu Dinheiro - 39:23
+
+``` 
+> Npm Init
+> Package.json
+> Express
+> Yarn
+> [Meu Dinheiro](https://github.com/RenatoSiqueira/DevPleno_Meu_Dinheiro.git) - 42:50
+> Template String
+> Dúvidas gerais
+> Ejs
+> Html
+> Processamento no servidor
+> 
 ```
