@@ -101,5 +101,62 @@ Módulo 36 - Bônus: Fullstack Academy - "Meu Dinheiro"
 > Ejs
 > Html
 > Processamento no servidor
-> 
+> CSS
+> Includes
+> Dúvidas gerais
+```
+
+#### 4. MÉTODO GET - 1:39:20
+
+``` 
+> Verbo GET
+> Relembrando Conceitos
+> Dúvidas gerais
+> SEO
+```
+
+#### 5. MONGODB - 2:01:23
+
+``` 
+> MongoDB Atlas
+> Cluster
+> Collections
+> Dúvidas gerais
+> Escalabilidade
+```
+
+#### 6. MÉTODO POST - 2:47:30
+
+``` 
+> Verbo POST
+> Body Parser
+> Dúvidas gerais
+```
+
+#### 7. SOBRE O FULLSTACK - 3:02:30
+
+``` 
+> Detalhes sobre o curso
+> Cursos extras
+> Dúvidas gerais
+> Sorteio
+```
+
+#### 8. Loading... 4:26:17
+
+
+# **Aula 03** - Total: 3:22:16
+
+#### 1. Loading...
+#### 2. Início do Vídeo - 8:33
+
+``` 
+> Boas vindas
+> Informações Gerais
+> Dúvidas gerais
+> Correção dos exercícios
+> Dúvidas gerais
+> Debug no VSCODE
+> Operacoes
+> Filtros 57:48
 ```
