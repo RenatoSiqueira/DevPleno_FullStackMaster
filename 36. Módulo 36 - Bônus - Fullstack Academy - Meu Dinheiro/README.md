@@ -160,3 +160,8 @@ Módulo 36 - Bônus: Fullstack Academy - "Meu Dinheiro"
 > Operacoes
 > Filtros 57:48
 ```
+
+# Erros
+```
+Deve-se usar a versao 2.2.33 do mongo, caso encontre problemas ao usar os métodos.
+```
