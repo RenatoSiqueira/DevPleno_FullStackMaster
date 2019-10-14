@@ -201,4 +201,39 @@ Deve-se usar a versao 2.2.33 do mongo, caso encontre problemas ao usar os métod
 
 ``` 
 > Create-react-app
+> Overview
+> JSX
+> DOM
+> Estado / Reatividade
+> Exemplo Prático setInterval
+> Dúvidas Gerais
+```
+
+#### 7. CONSUMINDO A API - 2:01:16
+
+``` 
+> FRONT: Axios
+> FRONT: componentDidMount
+> BACK: GET: api/operacoes
+> BACK: CORS
+> FRONT: JSON.stringify
+> FRONT: Map
+> FRONT: JSX
+> FRONT: Key
+> FRONT: Dúvidas Gerais - This polêmico?
+> FRONT: Componente Operacao
+> Destructuring Assignment
+> Arrow Function
+> Dúvidas Gerais - Qual componente criar?
+> Alteração no Render: State interno ou props
+> Dúvidas Gerais - Patterns / Redux / Injeção de Dependência
+> Dúvidas Gerais - Trocar a Cor do <p>
+> Dúvidas Gerais - Storybook.js.org
+> Dúvidas Gerais
+```
+
+#### 8. CONSIDERAÇÕES FINAIS - 2:50:53
+
+``` 
+> Comentários Gerais
 ```
