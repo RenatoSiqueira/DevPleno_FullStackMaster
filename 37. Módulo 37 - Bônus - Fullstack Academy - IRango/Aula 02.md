@@ -6,6 +6,11 @@ Módulo 37 - Bônus: Fullstack Academy - "IRango"
 
 # **Aula 02** - Total: 1:01:41
 
+# Atenção: Erros no Mongo
+```
+Deve-se usar a versao 2.2.33 do mongo, caso encontre problemas ao usar os métodos.
+```
+
 #### 1. Introdução
 ```
 > Informações Gerais
@@ -31,4 +36,17 @@ Módulo 37 - Bônus: Fullstack Academy - "IRango"
 > Database
 > Insert
 > Find
+> Restaurantes Ejs
+> Novo Restaurante
+> Body Parser
+> Req.Params
+> Delete
+> ObjectID
+```
+
+#### 4. Finalização - 57:47
+```
+> Finalização
+> Testemunho
+> Sobre o FullStackMaster
 ```
