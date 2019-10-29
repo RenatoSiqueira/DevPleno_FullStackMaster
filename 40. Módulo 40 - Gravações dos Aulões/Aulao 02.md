@@ -39,4 +39,46 @@ Módulo 40 - Gravações dos Aulões
 > Nodemon
 > REST API
 > Problemas na Organização
+> Dúvidas: Babel
+> Controllers
+> Routes
+> Dúvidas: Routes
+> View
+> Injeção de Dependências
+> Considerações sobre Testes
+> Dúvidas: Injeção de Dependências
+> Dúvidas: Posicionamento DB
+> Dúvidas: Operador Ternário VS Ganhos de Uso
+> Interação sobre Segurança
+> Explicação sobre Decisões de Projetos
+> Dúvidas: Erros
+> Dúvidas: Controllers - Routes - Model - View (Resumo)
+> Dúvidas: Quando usar EJS ou RESTAPI
+> Dúvidas: Electron
+> Dúvidas: Impressoras
+> Interação com Alunos
+```
+
+#### 6. Async/Await e Promises - 2:36:30
+``` 
+> Service Design
+> Async/Await
+> Dúvidas: Async/Await
+> Pause Live
+```
+
+#### 7. Sagas e Testes - 2:51:06
+``` 
+> Generator Function
+> Interação com Alunos
+> Testes
+> Considerações sobre Git
+> Code Review
+> Foto
+> Finalização
+```
+
+#### 8. Finalização - 3:10:56
+``` 
+> Agradecimentos
 ```
