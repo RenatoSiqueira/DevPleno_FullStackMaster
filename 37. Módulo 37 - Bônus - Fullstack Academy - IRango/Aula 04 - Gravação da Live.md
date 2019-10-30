@@ -100,4 +100,6 @@ Módulo 37 - Bônus: Fullstack Academy - "IRango"
 > Sobre o Curso Premium
 > Duvidas Gerais
 > Detalhamento Curso
+> Bate papo sobre Carreira
+> Agradecimentos
 ```
