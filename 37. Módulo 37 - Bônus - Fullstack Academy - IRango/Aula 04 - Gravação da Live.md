@@ -66,4 +66,23 @@ Módulo 37 - Bônus: Fullstack Academy - "IRango"
 #### 7. iRango React - 1:48:21
 ```
 > Inserindo Google Maps no React
+> Dúvidas Gerais
+> High Order Component - HOC
+> Google URL
+> Debug
+> Interação com Alunos
+```
+
+#### 8. iRango Node - 2:08:06
+```
+> Backend
+> API
+> res.Send
+```
+
+#### 9. iRango React - 2:13:21
+```
+> Interação com os Alunos
+> API
+> res.Send
 ```
