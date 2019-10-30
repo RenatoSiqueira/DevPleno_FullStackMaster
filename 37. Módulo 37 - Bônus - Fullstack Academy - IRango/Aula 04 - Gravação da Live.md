@@ -83,6 +83,21 @@ Módulo 37 - Bônus: Fullstack Academy - "IRango"
 #### 9. iRango React - 2:13:21
 ```
 > Interação com os Alunos
-> API
-> res.Send
+> Axios
+> Interpolação de Strings
+> Backend: CORS
+> Marker
+> Key
+> Navigator watchPosition
+> isLoading
+> Dica: Slow 3G
+> Dúvidas Gerais
+> Interação com Alunos
+```
+
+#### 10. Sobre o Curso FullStackMaster - 2:52:59
+```
+> Sobre o Curso Premium
+> Duvidas Gerais
+> Detalhamento Curso
 ```
